@@ -31,12 +31,6 @@ html{
     color: #FFFFFF;
 }
 
-/* Responsive */
-@media only screen and (max-width: 600px) {
-    .navbar__menu{
-        display: block;
-    }
-}
 /* Navbar */
 .navbar{
     width: 90%;
@@ -143,7 +137,6 @@ html{
 .home__btn--appstore{
     background-color: transparent;
     margin-left: 16px;
-    z-index: 2;
 }
 
 .home__btn--appstore:hover{
@@ -170,6 +163,7 @@ html{
 /* Work */
 .work{
     width: 100%;
+    margin: 0 auto;
 }
 
 .work__underline{
@@ -278,6 +272,24 @@ html{
     margin: 20px 0 78px;
 }
 
+.download__btn--playstore{
+    background: var(--primary-color);
+}
+
+.download__btn--playstore:hover{
+    background: transparent;
+    color: var(--primary-color);
+}
+
+.download__btn--appstore{
+    background: transparent;
+    color: var(--primary-color);
+}
+
+.download__btn--appstore:hover{
+    color: white;
+    background: var(--primary-color);
+}
 /* Footer */
 .footer{
     width: 90%;
@@ -300,4 +312,166 @@ html{
     font-size: 12px;
     line-height: 18px;
     color: var(--footer-color);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    /* Navbar */
+    .navbar__menu{
+        display: block;
+    }
+    .navbar__links{
+        display: none;
+    }
+    .navbar__logo,
+    .footer__logo{
+        width: 120px;
+    }
+
+    /* Home */
+    .home{
+        background-image: none;
+        background-color: #FAFAFA;
+    }
+    .home__text{
+        width: 90%;
+    }
+    .home__text--name{
+        font-size: 16px;
+        color: var(--text-color);
+        letter-spacing: 0.1px;
+    }
+    .home__text--heading{
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 42px;
+        letter-spacing: 0.2px;
+        color: #252B42;
+    }
+    .home__text--desc{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 38px;
+        color: var(--text-color);
+    }
+    .home__text--btn{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .home__btn--playstore{
+        margin: 0 0 16px 0;
+        border: var(--primary-color);
+    }
+    .home__btn--playstore:hover{
+        color: var(--primary-color);
+    }
+    .home__btn--appstore{
+        margin: 0;
+        color: var(--primary-color);
+        border: var(--primary-color);
+    }
+    .home__btn--appstore:hover{
+        color: white;
+    }
+
+    /* Img */
+    .img{
+        margin: 0 auto;
+    }
+    .img__app--img{
+        position: relative;
+        top: 50%;
+        left: 10%;
+        right: 0;
+        bottom: 0;
+        transform: translate(-20%, -50%);
+        width: 100%;
+        height: 100%;
+    }
+    /* Work */
+    .work{
+        /* height: 1000px; */
+        width: 100%;
+    }
+
+    .work__heading{
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 36px;
+        margin: 48px;
+        display: block;
+    }
+    .work__steps{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .work__step--text{
+        width: 100%;
+        height: 100%;
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .work__step--img{
+        order: 2;
+        display: block;
+    }
+    .work__step--name{
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .work__step--heading{
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 40px;
+        margin: 24px 0;
+    }
+    .work__step--desc{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 38px;
+    }
+
+    /* Download */
+    .download{
+        background-image: none;
+        background-color: #252B42;
+        display: block;
+    }
+    .download__text--heading{
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 57px;
+    }
+    .download__text--desc{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 38px;
+    }
+    .download__btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* border: var(--primary-color); */
+    }
+    
+    /* Footer */
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .footer__logo{
+        display: none;
+    }
 }
