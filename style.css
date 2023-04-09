@@ -184,12 +184,16 @@ html{
 }
 
 .work__steps{
-    width: 100%;
+    width: 80%;
     /* height: 600px; */
     margin: 0 auto 54px;
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+.work__steps:nth-child(2){
+    flex-wrap: wrap-reverse;
 }
 
 .work__step--img{
@@ -201,10 +205,12 @@ html{
 
 .work__step--img{
     margin: 0 20px;
+    order: 1;
 }
 
 .work__step--text{
     flex: 1;
+    order: 2;
     margin: 0 60px;
 }
 
@@ -227,14 +233,6 @@ html{
     line-height: 38px;
     color: var(--text-color);
 }
-
-/* .work__steps:nth-child(2) .work__step--img{
-    order: 2;
-}
-
-.work__steps:nth-child(2) .work__step--text{
-    order: 1;
-} */
 
 /* Download */
 .download{
